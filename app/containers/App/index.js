@@ -14,6 +14,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import TodoApp from 'containers/TodoApp/Loadable';
+import BattleApp from 'containers/BattleApp/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -41,6 +42,7 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/features" component={FeaturePage} />
         <Route path="/todo" component={TodoApp} />
+        <Route path="/battle" component={BattleApp} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />
