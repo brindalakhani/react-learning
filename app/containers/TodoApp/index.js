@@ -6,6 +6,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Container } from 'reactstrap';
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
@@ -51,7 +52,7 @@ export class HomePage extends React.PureComponent {
             content="A React.js Boilerplate application homepage"
           />
         </Helmet>
-        <div className="container">
+        <Container>
           <h1>ToDo Application</h1>
           <p>Add an Item...</p> 
 
@@ -73,7 +74,7 @@ export class HomePage extends React.PureComponent {
             </div>
 
           </div> 
-        </div>
+        </Container>
       </article>
     );
   }
