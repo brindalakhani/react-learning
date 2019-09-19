@@ -35,7 +35,7 @@ export default function App() {
         titleTemplate="%s - React.js Boilerplate"
         defaultTitle="React.js Boilerplate"
       >
-        <meta name="description" content="A React.js Boilerplate application" />
+        <meta name="description" content="React Learning" />
       </Helmet>
       <Header />
       <Switch>

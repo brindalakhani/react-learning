@@ -7,9 +7,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'reactstrap';
+import Popular from '../../components/BattleComponents/Popular';
+
 
 /* eslint-disable react/prefer-stateless-function */
-export class HomePage extends React.PureComponent {
+export class BattleApp extends React.PureComponent {
   constructor(props){
     super(props);
     this.state = {
@@ -28,12 +30,11 @@ export class HomePage extends React.PureComponent {
           />
         </Helmet>
         <Container>
-          <h1>Battle</h1>
-         
+          <Popular />
         </Container>
       </article>
     );
   }
 }
 
-export default HomePage;
+export default BattleApp;
