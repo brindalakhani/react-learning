@@ -7,6 +7,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from 'reactstrap';
+import { NavList, NavListItem } from './style';
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
@@ -52,25 +53,29 @@ export class HomePage extends React.PureComponent {
             content="A React.js Boilerplate application homepage"
           />
         </Helmet>
-        <Container>
-          <h1>ToDo Application</h1>
-          <p>Add an Item...</p> 
+        <Container className="my-5">
+          <h1 className="mb-4 text-center">ToDo Application</h1>
+          <p>Please add an Item...</p> 
 
           <div>
-            <input type="text" className="form-control" placeholder="Write a Todo" value={this.state.newItem} onChange={e => this.updateInput(e.target.value)} required/>
-            <button type="button" className="btn btn-primary" onClick={() => this.addItem(this.state.newItem)} disabled={!this.state.newItem.length}>Add ToDo</button>
+            <div className="d-flex">
+              <input type="text" className="form-control mr-3" placeholder="Write a Todo" value={this.state.newItem} onChange={e => this.updateInput(e.target.value)} required/>
+              <button type="button" className="btn btn-primary" onClick={() => this.addItem(this.state.newItem)} disabled={!this.state.newItem.length}>Add ToDo</button>
+            </div>
             <div className="todo-list">
-              <ul>
+              <NavList>
                 {this.state.list.map(item => {
                   return(
-                    <li key={item.id}>
-                      <input type="checkbox" name="idDone" checked={item.isDone} onChange={() => {}} />
-                      {item.value}
-                      <button type="button" className="btn btn-warning" onClick={() => this.deleteItem(item.id)}>Delete</button>
-                    </li>
+                    <NavListItem key={item.id}>
+                      <div>
+                        <input type="checkbox" className="mr-2" name="idDone" checked={item.isDone} onChange={() => {}} />
+                        {item.value}
+                      </div>
+                      <button type="button" className="btn btn-danger" onClick={() => this.deleteItem(item.id)}>Delete</button>
+                    </NavListItem>
                   );
                 })}
-              </ul>
+              </NavList>
             </div>
 
           </div> 
