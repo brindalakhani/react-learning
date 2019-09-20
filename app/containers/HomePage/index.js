@@ -62,7 +62,7 @@ export class HomePage extends React.PureComponent {
           />
         </Helmet>
         <div>
-          <CenteredSection>
+          {/* <CenteredSection>
             <H2>
               <FormattedMessage {...messages.startProjectHeader} />
             </H2>
@@ -90,7 +90,7 @@ export class HomePage extends React.PureComponent {
               </label>
             </Form>
             <ReposList {...reposListProps} />
-          </Section>
+          </Section> */}
         </div>
       </article>
     );
