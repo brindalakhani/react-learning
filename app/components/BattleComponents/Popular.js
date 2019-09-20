@@ -1,17 +1,17 @@
 import React from 'react';
-
+import { NavList, NavListItem } from './style';
 
 export class Popular extends React.PureComponent {
     render(){
         const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
         return(
-            <ul>
+            <NavList>
                 {languages.map((language) => (
-                    <li key={language}>
+                    <NavListItem key={language}>
                         <button type="button" className="btn btn-primary">{language}</button>
-                    </li>
+                    </NavListItem>
                 ))}
-            </ul>
+            </NavList>
         );
     }
 }
