@@ -18,4 +18,8 @@ export default defineMessages({
     id: 'boilerplate.components.Header.todo',
     defaultMessage: 'ToDo',
   },
+  battle: {
+    id: 'boilerplate.components.Header.battle',
+    defaultMessage: 'Battle',
+  },
 });
