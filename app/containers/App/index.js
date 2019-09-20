@@ -17,7 +17,7 @@ import TodoApp from 'containers/TodoApp/Loadable';
 import BattleApp from 'containers/BattleApp/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
-import Footer from 'components/Footer';
+// import Footer from 'components/Footer';
 
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);
@@ -45,7 +45,7 @@ export default function App() {
         <Route path="/battle" component={BattleApp} />
         <Route path="" component={NotFoundPage} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </AppWrapper>
   );
 }
