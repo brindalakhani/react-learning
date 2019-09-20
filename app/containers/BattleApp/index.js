@@ -29,7 +29,7 @@ export class BattleApp extends React.PureComponent {
             content="A React.js Boilerplate application homepage"
           />
         </Helmet>
-        <Container>
+        <Container className="mt-5">
           <Popular />
         </Container>
       </article>
